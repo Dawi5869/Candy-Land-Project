@@ -1,32 +1,44 @@
-# Candyland Terminal Game (C++)
+# 🍬 Candy-Land Terminal Game (C++)
 
-## 🍬 Overview
-This project is a fully playable, object-oriented implementation of a Candyland-style board game built in C++. The game runs entirely in the terminal via VS Code, with support for up to 8 players and dynamic gameplay elements including a deck of cards, a candy store, and tile-based movement logic. I was provided only the game rules and tasked with designing and implementing the full codebase from scratch.
+## 🧠 Overview
+This is a terminal-based, object-oriented board game inspired by Candyland, fully implemented in C++. The game supports up to 8 players and runs entirely in the terminal using a custom class system built from scratch. I was given only the gameplay rules and created the entire codebase — including the game flow, class structure, file I/O, and user interaction logic — independently.
 
 ## 🛠 Tools & Technologies
-- C++ (OOP and STL)
+- C++17
 - Visual Studio Code
-- Git / GitHub for version control
+- Git / GitHub
 
 ## 📦 Features
-- Modular object-oriented design using multiple interacting classes
-- Dynamic deck of cards that influences player progression
-- Candy store system for in-game decision-making or bonuses
-- Navigable board with tile logic
-- Support for 2–8 players
-- Clear turn system and win condition logic
-- Fully playable in a terminal/command-line interface
+- Object-oriented architecture with clean separation of game logic
+- Custom deck and board mechanics
+- Candy store for in-game bonuses or modifiers
+- Data-driven design with external text files for cards and characters
+- Modular driver files for testing and demonstration
+- Fully interactive terminal gameplay
 
-## 🧱 Architecture
-The game is divided into the following core components:
-- `CandyTile` class – Represents spaces on the board
-- `Deck` class – Manages drawing and shuffling of cards
-- `Player` class – Tracks player stats, position, and inventory
-- `CandyStore` class – Allows interaction with bonus items or boosts
-- `BoardNavigation` – Handles movement and tile effects
+## 🧱 Class Breakdown
+- `Board.cpp/h`: Manages tile layout and player positioning
+- `DeckOfCards.cpp/h`: Handles card generation, shuffling, and draws
+- `CandyStore.cpp/h`: Contains bonus systems or player upgrades
+- `Game.cpp/h`: Coordinates overall game logic and flow
+- `Player.cpp/h`: Tracks player data, movement, and inventory
 
-## ⚠️ Challenges & Fixes
-Toward the final stages of development, I encountered a **circular dependency** between two of the core classes, which caused compiler errors. This was resolved by refactoring the code to reduce interdependencies and using forward declarations to break the cycle. Redefining function locations and managing header inclusions were key to successfully compiling and running the game.
+## 📂 Key Data Files
+- `Candies.txt`: Stores candy tile descriptions or layout data
+- `Characters.txt`: Contains player/character starting info
 
-## Code
-All of the code has been added to this repository. Feel free to navigate to the Project 2 file above to take a look.
+## 🧪 Driver Files
+These were created to test individual systems during development:
+- `Driver.cpp`: Main game entry point
+- `boardDriver.cpp`, `playerDriver.cpp`, `candyStoreDriver.cpp`: Unit-level testing for major classes
+- `practice.cpp`: Scratch/test space for isolated logic
+
+## ⚠️ Challenges
+A major challenge I faced was resolving a circular dependency error between two interlinked classes. This caused compile-time issues, which I resolved through forward declarations and by refactoring some function placements to break the dependency cycle.
+
+## ▶️ How to Compile & Run
+Make sure you're in the `Project 2` directory and have a C++17-compatible compiler (like `g++`):
+
+```bash
+g++ -std=c++17 *.cpp -o candyland
+./candyland
