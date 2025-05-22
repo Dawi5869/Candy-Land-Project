@@ -29,4 +29,4 @@ The game is divided into the following core components:
 Toward the final stages of development, I encountered a **circular dependency** between two of the core classes, which caused compiler errors. This was resolved by refactoring the code to reduce interdependencies and using forward declarations to break the cycle. Redefining function locations and managing header inclusions were key to successfully compiling and running the game.
 
 ## Code
-All of the code has been added to this repository. Feel free to navigate to the (blank) file to take a look.
+All of the code has been added to this repository. Feel free to navigate to the Project 2 file above to take a look.
