@@ -42,3 +42,6 @@ Make sure you're in the `Project 2` directory and have a C++17-compatible compil
 Compile: ```g++ -std=c++17 -Wall -Werror -Wpedantic Game.cpp Player.cpp DeckOfCards.cpp Board.cpp CandyStore.cpp Driver.cpp ``` <br />
 Run: ```./a.outg++ -std=c++17 *.cpp -o candyland``` <br />
 ```./candyland```
+
+## 📬 Contact
+Reach out at dawi5869@colorado.edu
